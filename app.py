@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Load and prepare the dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv("job_data.csv")
+    df = pd.read_csv("job_recommendation_dataset.csv")
     df['Required Skills'] = df['Required Skills'].fillna('')
     df['Company'] = df['Company'].fillna('Unknown')
     df['Location'] = df['Location'].fillna('Not Specified')
