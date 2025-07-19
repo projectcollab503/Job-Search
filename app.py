@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import re
 
-# 📦 Manually added job info for realistic matching
+# 📦 Manually added job data for realistic matching
 data = {
     "Job Title": [
         "Data Analyst",
@@ -66,21 +66,21 @@ data = {
     ]
 }
 
-# Create a DataFrame
+# ✅ Create a DataFrame
 df = pd.DataFrame(data)
 
-# 🔧 Text cleaning
+# 🔧 Text cleaning function
 def preprocess(text):
     return re.sub(r'[^a-zA-Z0-9, ]', '', text.lower())
 
-# 💡 Job matching function
+# 💡 Improved skill-based job recommender
 def recommend_jobs(user_input, top_n=5):
     user_input = preprocess(user_input)
     user_skills = [skill.strip() for skill in user_input.split(",") if skill.strip()]
     
     def match(row_skills):
-        job_skills = preprocess(row_skills).split(",")
-        return any(skill in job_skills for skill in user_skills)
+        row_skills = preprocess(row_skills)
+        return any(skill in row_skills for skill in user_skills)
     
     filtered = df[df['Required Skills'].apply(match)]
     
@@ -89,7 +89,7 @@ def recommend_jobs(user_input, top_n=5):
     
     return filtered[["Job Title", "Company", "Location", "Salary"]].drop_duplicates().head(top_n).reset_index(drop=True)
 
-# 🖥️ Streamlit UI
+# 🖥️ Streamlit UI setup
 st.set_page_config(page_title="AI Job Recommender", layout="centered")
 st.title("💼 AI Job Recommender Based on Your Skills")
 
