@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import re
 
-# ✅ Extended job dataset with 30+ diverse job entries
+# ✅ Expanded job dataset with better skill coverage
 data = {
     "Job Title": [
         "Data Analyst", "Software Developer", "Machine Learning Engineer", "Frontend Developer",
@@ -39,51 +39,51 @@ data = {
         "₹5,00,000", "₹6,50,000", "₹5,80,000", "₹7,20,000", "₹6,00,000"
     ],
     "Required Skills": [
-        "python, sql, data analysis, excel, statistics",
-        "java, python, algorithms, software development",
-        "machine learning, deep learning, python, numpy, pandas",
-        "html, css, javascript, react, frontend",
-        "node.js, backend, api, databases, server",
-        "sql, oracle, database tuning, administration",
-        "docker, jenkins, kubernetes, linux, deployment",
-        "cloud computing, aws, azure, virtual machines",
-        "network security, firewalls, risk assessment",
-        "technical support, troubleshooting, it helpdesk",
+        "python, sql, data analysis, excel, statistics, reporting, dashboards",
+        "java, python, algorithms, software development, object oriented programming",
+        "machine learning, deep learning, python, numpy, pandas, data science",
+        "html, css, javascript, react, frontend, web development, ui design",
+        "node.js, backend, api, databases, server, express.js, restful apis",
+        "sql, oracle, database tuning, administration, mysql, indexing",
+        "docker, jenkins, kubernetes, linux, deployment, automation, ci/cd",
+        "cloud computing, aws, azure, gcp, virtual machines, cloud storage",
+        "network security, firewalls, risk assessment, vulnerability scanning",
+        "technical support, troubleshooting, windows, networking, customer service",
 
-        "autocad, solidworks, mechanical design, manufacturing",
-        "construction, civil engineering, site management, autocad",
-        "circuits, wiring, power systems, electrical maintenance",
-        "vehicle design, engine systems, CAD, automobile",
-        "construction site, project execution, estimation",
+        "autocad, solidworks, mechanical design, manufacturing, machine drawing",
+        "construction, civil engineering, site management, autocad, estimation",
+        "circuits, wiring, power systems, electrical maintenance, plc, scada",
+        "vehicle design, engine systems, CAD, automobile, chassis, suspension",
+        "construction site, project execution, costing, layout planning",
 
-        "accounting, tally, excel, gst, financial reporting",
-        "income tax, gst, audit, finance, accounting",
-        "internal audit, compliance, ms excel, analysis",
-        "financial modeling, ms excel, budgeting, reporting",
-        "investment banking, equity research, valuation",
+        "accounting, tally, excel, gst, financial reporting, bookkeeping, invoices",
+        "income tax, gst, audit, finance, accounting, tax filing",
+        "internal audit, compliance, ms excel, analysis, documentation",
+        "financial modeling, budgeting, reporting, valuation, investment",
+        "investment banking, equity research, valuation, pitch books, IPO",
 
-        "pharmacy, pharmaceutical, prescriptions, drugs",
-        "lab testing, pathology, sample collection, reports",
-        "radiology, imaging, medical scans, diagnostics",
-        "rehabilitation, exercises, physical therapy",
-        "patient care, nursing, assistance, hygiene",
+        "pharmacy, pharmaceutical, prescriptions, drugs, medicine dispensing",
+        "lab testing, pathology, sample collection, lab reports, diagnostics",
+        "radiology, imaging, xray, ct scan, ultrasound, diagnosis",
+        "rehabilitation, exercises, physical therapy, muscle therapy",
+        "patient care, nursing, assistance, hygiene, medication support",
 
-        "photoshop, illustrator, visual design, creativity",
-        "figma, wireframe, user experience, interface design",
-        "recruitment, onboarding, HRMS, employee engagement",
-        "market research, excel, data visualization, strategy",
-        "seo, google ads, content writing, campaigns"
+        "photoshop, illustrator, visual design, creativity, banners, posters",
+        "figma, wireframe, user experience, interface design, prototyping",
+        "recruitment, onboarding, HRMS, employee engagement, communication, interview",
+        "market research, excel, data visualization, strategy, surveys",
+        "seo, google ads, content writing, campaigns, social media"
     ]
 }
 
-# ✅ Load data into DataFrame
+# ✅ Load into DataFrame
 df = pd.DataFrame(data)
 
-# 🔧 Text cleaning
+# 🔧 Clean text
 def preprocess(text):
     return re.sub(r'[^a-zA-Z0-9, ]', '', text.lower())
 
-# 💡 Skill-based recommender
+# 💡 Matching logic
 def recommend_jobs(user_input, top_n=5):
     user_input = preprocess(user_input)
     user_skills = [skill.strip() for skill in user_input.split(",") if skill.strip()]
@@ -100,8 +100,8 @@ def recommend_jobs(user_input, top_n=5):
     return filtered[["Job Title", "Company", "Location", "Salary"]].drop_duplicates().head(top_n).reset_index(drop=True)
 
 # 🖥️ Streamlit UI
-st.set_page_config(page_title="AI Job Recommender", layout="centered")
-st.title("💼 AI Job Recommender Based on Your Skills")
+st.set_page_config(page_title="Job Recommendation Based on Skills", layout="centered")
+st.title("💼 Job Recommendation Based on Skills")
 
 user_input = st.text_input("🔍 Enter your skills (comma-separated):", placeholder="e.g. python, accounting, mechanical design")
 
