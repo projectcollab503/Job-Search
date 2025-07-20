@@ -1,0 +1,31 @@
+Job Title,Company,Location,Salary,Required Skills,Category
+Software Engineer,TechNova,Bangalore,120000,"""python,  java,  sql,  flask""",Software
+Frontend Developer,Webify,Mumbai,100000,"""html,  css,  javascript,  react""",Software
+Data Analyst,Insight Corp,Pune,110000,"""excel,  sql,  python,  tableau""",Software
+Machine Learning Engineer,BrainTech,Bangalore,150000,"""python,  sklearn,  pandas,  ml""",Software
+DevOps Engineer,CloudOps,Hyderabad,130000,"""docker,  kubernetes,  linux,  aws""",Software
+Accountant,FinServ,Delhi,90000,"""tally,  gst,  excel,  accounting""",Finance
+Financial Analyst,MoneyMind,Mumbai,105000,"""excel,  financial modeling,  python""",Finance
+Tax Consultant,TaxEase,Ahmedabad,85000,"""taxation,  gst,  tally""",Finance
+Auditor,AuditMax,Bangalore,95000,"""auditing,  compliance,  accounting""",Finance
+Accounts Executive,LedgerLine,Noida,88000,"""tally,  billing,  ms excel""",Finance
+Surgeon,HealthFirst,Delhi,200000,"""surgery,  patient care,  medical""",Healthcare
+Nurse,CareWell,Pune,80000,"""nursing,  patient support,  injection""",Healthcare
+Radiologist,ScanCare,Hyderabad,170000,"""ct scan,  x-ray,  diagnosis""",Healthcare
+Pharmacist,PharmaPoint,Chennai,75000,"""dispensing,  pharma knowledge""",Healthcare
+Lab Technician,Medix Lab,Mumbai,70000,"""testing,  microscope,  lab handling""",Healthcare
+Mechanical Engineer,AutoMech,Nashik,110000,"""solidworks,  autocad,  mechanics""",Engineering
+Civil Engineer,BuildRight,Jaipur,115000,"""autocad,  site planning,  civil 3d""",Engineering
+Electrical Engineer,ElectroMax,Kolkata,108000,"""circuit design,  plc,  transformer""",Engineering
+Structural Engineer,InfraLine,Bangalore,118000,"""etabs,  staad pro,  analysis""",Engineering
+Design Engineer,CADPro,Chennai,107000,"""autocad,  3d modeling""",Engineering
+Marketing Manager,BrandWise,Mumbai,140000,"""seo,  branding,  campaign""",Marketing
+Digital Marketer,WebBuzz,Delhi,100000,"""seo,  google ads,  content""",Marketing
+Content Strategist,WriteUp,Noida,95000,"""content writing,  marketing,  strategy""",Marketing
+Sales Executive,SellWell,Indore,85000,"""crm,  negotiation,  communication""",Sales
+Sales Manager,ProfitPeak,Kolkata,130000,"""b2b sales,  forecasting""",Sales
+Teacher,Greenwood School,Delhi,75000,"""lesson planning,  curriculum,  teaching""",Education
+Professor,Tech University,Chennai,140000,"""lecturing,  research,  phd""",Education
+Counselor,MindMatters,Pune,82000,"""career guidance,  listening,  empathy""",Education
+Trainer,SkillForge,Bangalore,88000,"""training,  communication,  soft skills""",Education
+School Principal,Scholars High,Hyderabad,160000,"""administration,  leadership""",Education
